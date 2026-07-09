@@ -1,0 +1,19 @@
+{
+  "name": "gigcraft-ai-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev --workspace=apps/api",
+    "dev:extension": "npm run dev --workspace=apps/extension",
+    "build:shared": "npm run build --workspace=packages/shared",
+    "build:api": "npm run build --workspace=apps/api",
+    "build:extension": "npm run build --workspace=apps/extension"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
