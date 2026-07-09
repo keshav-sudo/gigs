@@ -58,9 +58,13 @@ app.use('/api/ai', aiRoutes);
 // Direct mapping for GET /api/history
 app.get('/api/history', authMiddleware as any, getGenerationHistory as any);
 
-// Root route
+// Health & Root routes
 app.get('/', (req, res) => {
-  res.json({ message: 'GigCraft AI API is running' });
+  res.json({ status: 'UP', message: 'GigCraft AI API is running' });
+});
+
+app.get('/health', (req, res) => {
+  res.json({ status: 'UP', message: 'Service is healthy' });
 });
 
 // Error handling middleware
