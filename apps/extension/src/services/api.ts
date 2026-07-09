@@ -1,6 +1,6 @@
 import { useAuthStore } from '../stores/authStore.js';
 
-const BASE_URL = 'http://localhost:5000/api';
+const BASE_URL = 'https://gigs-yzib.onrender.com/api';
 
 const getHeaders = (): HeadersInit => {
   const token = useAuthStore.getState().token;

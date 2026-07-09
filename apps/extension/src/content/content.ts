@@ -149,7 +149,7 @@ const togglePanel = async (shadowRoot: ShadowRoot) => {
   shadowRoot.appendChild(panel);
 
   try {
-    const response = await fetch('http://localhost:5000/api/gigs', {
+    const response = await fetch('https://gigs-yzib.onrender.com/api/gigs', {
       headers: {
         'Authorization': `Bearer ${jwtToken}`
       }
